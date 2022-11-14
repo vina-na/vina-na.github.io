@@ -83,6 +83,8 @@ function move() {
 		// Change game state and end the game
 		// if collision occurs
 		game_state = 'End';
+	        music.pause();
+                gameoverm.play();
 		message.innerHTML = 'Press Enter To Restart';
 		message.style.left = '28vw';
 		return;
@@ -169,5 +171,3 @@ function create_pipe() {
 }
 requestAnimationFrame(create_pipe);
 }
-music.pause();
-gameoverm.play();
